@@ -1,0 +1,1 @@
+yui.add("tictac-stationery",function(a){a.namespace("Tictac.stationery").loader=function(){}});

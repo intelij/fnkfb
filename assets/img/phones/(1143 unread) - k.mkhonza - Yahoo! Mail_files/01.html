@@ -1,0 +1,200 @@
+
+<!-- saved from url=(0356)https://view.atdmt.com/MDG/iview/473827396/direct/01?click=https://ads.yahoo.com/clk?3,eJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw==, -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>140224_HSBC_TucTuc_160x600_IF</title>
+<meta http-equiv="expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+</head><body style="border-width:0px;margin:0px;" bgcolor="White" marginwidth="0" marginheight="0">
+<script type="text/javascript">
+
+	  
+var nRequiredVersion = 9; 
+var bIsRightVersion = false;	
+var isIE = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
+var isWin = (navigator.appVersion.toLowerCase().indexOf("win") != -1) ? true : false;
+var isOpera = (navigator.userAgent.indexOf("Opera") != -1) ? true : false;
+var isIE11 = (navigator.appVersion.indexOf("rv:11.0") != -1) ? true : false;
+if((isIE || isIE11) && isWin){
+document.writeln('<SCR' + 'IPT LANGUAGE=VBScript\>');
+document.writeln('on error resume next');
+document.writeln('Set oFlashPlayer = CreateObject("ShockwaveFlash.ShockwaveFlash." & nRequiredVersion)');
+document.writeln('If IsObject(oFlashPlayer) Then');
+document.writeln('bIsRightVersion = True');
+document.writeln('End If');
+document.writeln('If (Not bIsRightVersion) And (nRequiredVersion < 3) Then');
+document.writeln('Set oFlashPlayer = CreateObject("ShockwaveFlash.ShockwaveFlash")');
+document.writeln('If IsObject(oFlashPlayer) Then');
+document.writeln('bIsRightVersion = True');
+document.writeln('End If');
+document.writeln('End If');
+document.writeln('</SCR' + 'IPT\>'); 
+}
+
+function detectPluginHU21393861004559() 
+{ 
+    if (!bIsRightVersion) 
+    {
+        var flashPluginVersion;
+        if (navigator.plugins && navigator.plugins.length > 0) {
+            // This is for IE11, Safari, Firefox and Chrome.
+            flashPluginVersion = getFlashPluginVersionForBrowser();
+            bIsRightVersion = IsPluginVersionRightToPlayFlash(flashPluginVersion);
+        }
+        else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.6") != -1)
+        {
+            bIsRightVersion = (4 >= nRequiredVersion);
+        }
+        else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.5") != -1)
+        {
+            bIsRightVersion = (3 >= nRequiredVersion);
+        }
+        else if (navigator.userAgent.toLowerCase().indexOf("webtv") != -1) 
+        {
+            bIsRightVersion = (2 >= nRequiredVersion);
+        }
+        else {
+            // This is for IE10, IE9, IE8.
+            flashPluginVersion = getFlashActiveXObjectVersionForBrowser();
+            bIsRightVersion = IsPluginVersionRightToPlayFlash(flashPluginVersion);
+        }
+    }
+}
+
+// This is used for IE11, Safari, Firefox and Chrome.
+function getFlashPluginVersionForBrowser()
+{
+    var flashPluginVersion;
+    if (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]) {
+        // Check Shockwave Flash plugin version.
+        var swVer2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+        var flashDescription = navigator.plugins["Shockwave Flash" + swVer2].description;
+        var descArray = flashDescription.split(" ");
+        flashPluginVersion = descArray[2].split(".");
+    }
+    else{
+        // Check Mime-Type enabled plugins for Flash Plugin version.
+        var type = 'application/x-shockwave-flash';
+        var mimeTypes = navigator.mimeTypes;
+        if (mimeTypes && mimeTypes[type] && mimeTypes[type].enabledPlugin && mimeTypes[type].enabledPlugin.description) {
+            flashPluginVersion = mimeTypes[type].enabledPlugin.description.replace(/^.*?([0-9]+)\.([0-9])+.*$/, '$1,$2').split(',');
+        }
+    }
+    return flashPluginVersion;
+}
+
+// This is used for IE10, IE9, IE8.
+function getFlashActiveXObjectVersionForBrowser()
+{
+    // Check Flash plugin version by creating ActiveXObject for ShockwaveFlash
+    var flashPluginVersion;
+    var flashObj = null;
+    try { flashObj = new ActiveXObject('ShockwaveFlash.ShockwaveFlash'); } catch (ex) { bIsRightVersion = false; }
+    if (flashObj != null) {
+        var fV;
+        try { fV = flashObj.GetVariable("$version"); } catch (err) { bIsRightVersion = false; }
+        flashPluginVersion = fV.replace(/^.*?([0-9]+,[0-9]+).*$/, '$1').split(',');
+    }
+    return flashPluginVersion;
+}
+
+function IsPluginVersionRightToPlayFlash(flashPluginVersion) 
+{ 
+    // To determine if Plugin can play flash file
+    // 1. Check if major version of plugin > major version of file 
+    // OR
+    // 2. if major version of plugin = major version of file AND minor version of plugin >= minor version of file
+    var requiredFlashVersion = nRequiredVersion.toString().split(".");    
+    var requiredFlashVersionMajor = requiredFlashVersion[0];
+    var requiredFlashVersionMinor = requiredFlashVersion[1];
+    requiredFlashVersionMinor = requiredFlashVersionMinor || 0;
+
+    if (flashPluginVersion) {
+        var flashPluginVersionMajor = parseInt(flashPluginVersion[0], 10);
+        var flashPluginVersionMinor = parseInt(flashPluginVersion[1], 10);
+        return (requiredFlashVersionMajor < flashPluginVersionMajor) || ((requiredFlashVersionMajor == flashPluginVersionMajor) && (requiredFlashVersionMinor <= flashPluginVersionMinor));
+    }
+    else {
+         return false;
+    }   
+}
+
+detectPluginHU21393861004559();
+
+var _HU21393861004559_Instance =
+{
+  click : "https://ads.yahoo.com/clk?3,eJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw==,",
+  clickThruUrl: "http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.$num$/01/",
+  imgs : []
+};
+
+if (!window.armapi_a1_a1)
+{
+  var armapi_a1_a1 =
+  {
+    initialize : function(unique_id){},
+    click : function(unique_id, num, suffix)
+    {
+      this.clickTrack(unique_id);
+      this.clickThru(unique_id, num, suffix);
+    },
+    clickTrack : function(unique_id, num)
+    {
+      var instance = window[unique_id + "_Instance"];
+      if (instance.click != "")
+      {
+        var img = new Image();
+        img.src = instance.click + "http://t.atdmt.com";
+        instance.imgs.push(img);  
+      }
+    },
+    clickThru : function(unique_id, num, suffix) {      
+      var instance = window[unique_id + "_Instance"];
+      var url = instance.clickThruUrl.replace("$num$", num) + suffix;
+      window.open(url, "_blank");    
+    }
+  };
+}
+
+var armapi_ArmClickType = isIE || isIE11 ? "ext" : "";
+
+var _strContentHU21393861004559 = '';
+if(bIsRightVersion) 
+{ 
+ 	var strFQDN = "HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/";  
+var index = strFQDN.indexOf("/ds/");
+strFQDN = strFQDN.substring(0, index);
+_strContentHU21393861004559 = '' + '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="HTTPS://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="idSWFHU21393861004559" width="160" height="600">'
++ '<param name="movie" value="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/Q1_2014_Loans_DR_Display_01032014/140224_HSBC_TucTuc_160x600.swf?ver=1&clickTag1=!~!click!~!http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01&clickTag=!~!click!~!http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01" />'
++ '<param name="base" value="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/" />'
++ '<param name="FlashVars" value="ArmClickType='+ armapi_ArmClickType + '&unique_id=_HU21393861004559&ArmApi=armapi_a1_a1&ArmClickUrl=http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.$num$/01/&ArmClickToken=$num$" />'
++ '<param name="quality" value="high" />'
++ '<param name="salign" value="lt" />'
++ '<param name="loop" value="true" />'
++ '<param name="wmode" value="opaque" />'
++ '<param name="allowScriptAccess" value="always" />'
++ '<embed allowScriptAccess="always" quality="high" salign="LT" loop="true" type="application/x-shockwave-flash" pluginspace="HTTPS://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" base="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/" wmode="opaque" src="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/Q1_2014_Loans_DR_Display_01032014/140224_HSBC_TucTuc_160x600.swf?ver=1&clickTag1=!~!click!~!http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01&clickTag=!~!click!~!http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01" width="160" height="600" FlashVars="unique_id=_HU21393861004559&ArmApi=armapi_a1_a1&ArmClickUrl=http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.$num$/01/&ArmClickToken=$num$" />'
++ '</object>'
++ '';
+var pubClickTracker = 'https://ads.yahoo.com/clk?3,eJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw==,';
+if (pubClickTracker.indexOf("http%3A%2F%2F") != 0 && pubClickTracker.indexOf("https%3A%2F%2F") != 0)
+    pubClickTracker = encodeURIComponent(pubClickTracker);
+
+if ( "%OOB%" == "1" )
+  _strContentHU21393861004559 = _strContentHU21393861004559.replace(/!~!click!~!/g,'');
+else 
+  _strContentHU21393861004559 = _strContentHU21393861004559.replace(/!~!click!~!/g, pubClickTracker);
+} 
+else 
+{ 
+_strContentHU21393861004559 = '<a target="_blank" href="https://ads.yahoo.com/clk?3,eJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw==,http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01/"><img border="0" src="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/Q1_2014_Loans_DR_Display_01032014/140224_HSBC_TucTuc_160x600.gif?ver=1" width="160" height="600" /></a>';
+}
+
+
+</script>
+<script type="text/javascript">document.write(_strContentHU21393861004559);</script><span class="**MicrosoftAdvertising_AdWrap**" style="display: inline-block; position: relative;"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="idSWFHU21393861004559" width="160" height="600"><param name="movie" value="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/Q1_2014_Loans_DR_Display_01032014/140224_HSBC_TucTuc_160x600.swf?ver=1&amp;clickTag1=https%3A%2F%2Fads.yahoo.com%2Fclk%3F3%2CeJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw%3D%3D%2Chttp://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01&amp;clickTag=https%3A%2F%2Fads.yahoo.com%2Fclk%3F3%2CeJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw%3D%3D%2Chttp://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01"><param name="base" value="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/"><param name="FlashVars" value="ArmClickType=&amp;unique_id=_HU21393861004559&amp;ArmApi=armapi_a1_a1&amp;ArmClickUrl=http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.$num$/01/&amp;ArmClickToken=$num$"><param name="quality" value="high"><param name="salign" value="lt"><param name="loop" value="true"><param name="wmode" value="opaque"><param name="allowScriptAccess" value="always"><embed allowscriptaccess="always" quality="high" salign="LT" loop="true" type="application/x-shockwave-flash" pluginspace="HTTPS://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" base="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/" wmode="opaque" src="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/Q1_2014_Loans_DR_Display_01032014/140224_HSBC_TucTuc_160x600.swf?ver=1&amp;clickTag1=https%3A%2F%2Fads.yahoo.com%2Fclk%3F3%2CeJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw%3D%3D%2Chttp://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01&amp;clickTag=https%3A%2F%2Fads.yahoo.com%2Fclk%3F3%2CeJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw%3D%3D%2Chttp://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01" width="160" height="600" flashvars="unique_id=_HU21393861004559&amp;ArmApi=armapi_a1_a1&amp;ArmClickUrl=http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.$num$/01/&amp;ArmClickToken=$num$"></object><span class="**MicrosoftAdvertising_AdChoicesPlugin**" style="position: absolute; top: 0px; right: 0px; z-index: 2147483647;"><a target="_blank" href="http://g.msn.com/AIPRIV/EN-US?adchc=1" style="display: block; height: 15px; width: 77px;"><img src="CollisionAdMarker.png" style="border-width: 0px; display: block;"></a></span></span>
+<script type="text/javascript">
+  if("1" == "1"){document.write('<scr' + 'ipt type="text/javascript" src="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/Ad.autoLoad.js?plugin=AdChoices"></scr' + 'ipt>');}
+</script><script type="text/javascript" src="Ad.autoLoad.js"></script>
+<noscript>
+&lt;a target="_blank" href="https://ads.yahoo.com/clk?3,eJytjMGOgjAYhJ.GGyHtX4o0zR5-t5hgaJVY1.QIroIGxAQSxKdXo-sT7Jc5TCYzQ5kUEIodCadcQMD3AJIGPCzYge1J4REpJQhgXBDGifeTbxSmXbdCFWVBOcMnCcNiwD8ql7VvG-E3Yhy7bsDylZzpeoH.w41e3dsm-PwvVYTWEj8nm9mnpRx3oAfTZEO61dSA67Wd13qklTnFJLW.R2dNrRXCcpuMpvwsvzyv6vtLN2E4gflDTX6s.TGv2tbftc0dKyBXWw==,http://clk.atdmt.com/go/473827396/direct;ai.343076546;ct.1/01"&gt;&lt;img border="0" src="HTTPS://a248.e.akamai.net/img.atdmt.com/ds/MDMDGHSBCHU2/Q1_2014_Loans_DR_Display_01032014/140224_HSBC_TucTuc_160x600.gif?ver=1" width="160" height="600" /&gt;&lt;/a&gt;
+</noscript>
+</body></html>

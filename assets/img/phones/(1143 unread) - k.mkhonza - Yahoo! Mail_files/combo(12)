@@ -1,0 +1,1 @@
+YUI.add("tictac-att-helper",function(e){var t=e.namespace("Tictac.att");t.saveMenu=[];t.helper={registerMenuHelper:function(e){if(e&&e.action&&e.strMenu&&e.actionAll&&e.strMenuAll){t.saveMenu.push(e);return true}return false}}},"1.0.0",{requires:[]});
