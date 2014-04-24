@@ -485,3 +485,7 @@ text-align: left;
 /*	background: #f85c37;
 	border-radius: 8px;*/
 }
+
+figure {
+	margin: 2px;
+}
